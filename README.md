@@ -1,2 +1,3 @@
-# lpp
-L++ The universal programming language supporting the most common iterative, functional and object oriented languages like C++, C#, C, Java, Haskell, Python and many more! 
+# L++: The universal programming language parser that supports the most common iterative, functional and object oriented languages like C++, C#, C, Java, Haskell, Python and many more! 
+
+## Please read this code and hold down your first impression
