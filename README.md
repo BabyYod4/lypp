@@ -17,6 +17,8 @@ This inspired me to come up with a "solution" that could work for everyone (as f
 
 Now you can encapsulate a block of code from language A and use it nativly, but still be ensured that a block of code of langauge B can access or use the code from A in some manner. 
 
+This will be a project i will do in my free time (mostly in the weekends) next some other project of my company, so i dont expect the development to be that fast. Another thing to consider is that I will probally change allot of code to be more optimized in the future as i will progress in my studies from Bachlor to Masters to PhD, so i will have better knowledge in Computer Science and Engineering. 
+
 ## So what is this about?
 The example code you have read shows you how 'block oriented' programming can be used to make multiple programming languages compatible with each other. 
 
@@ -34,6 +36,8 @@ A collection of `<tasks>`'s will always be structered in a `tree` where the fail
 ## How it realy works:
 In reality LY++ is nothing more than a glorified C++ 'pre-parser' meaning it will translate all of the source code into a single c++ (or multiple if requested) file which can be compiled easily with almost every generic `g++` compiler (see image below). 
 ![explain](https://user-images.githubusercontent.com/59289792/74106411-26a0ab80-4b67-11ea-9617-dfb15eb73299.png)
+
+The reason i have chosen C++ as a base, is because i have the most expecrience in it (compared to other languages) and i believe that it can be considered the 'Swiss Army Knife of Programming'. Another reason it that its one of the few languages i know that allowed for manual memory allocation, which means i could easily simulate a language that uses a garbage collector, but would never be able to simulate C++ in a language that has a garbage collector. (aka C++ can simulate [Java, etc] but [Java,etc] can never simulate C++. Ofcourse i could also use `C` as a base but trying to simulate Objected Oriented code in it is a real eye sore, and believe it or not i have a social life with family and friends ;D. I'd rather not walk that razor blade. 
 
 ## Quircks and Limitations
 
@@ -67,4 +71,53 @@ For that reason there should be a ruleset for each paradigm on what kind of `<in
 <block id="hello" lang="C", use="foo" ...>
   foo_bar();
 </block>
+```
+
+(2) Only the standard library of each programmign language and the LY++ Library will be supported in the first stages of the project. This is because the project would not benefit from trying to support all the libraries. Instead i want to focus on the LY++ parser it self to make it faster, and make it detect/translate code from other languages more accuratly in C++. 
+- But with that i would have to note that i will base much of the LY++ library on pre-existing libraries like QT etc so i would this most of the pre made libraries should suffice for the early adopters/users/testers. 
+
+(3) Compile time error messages will be in the C++ language format for the first versions of LY++, so i dont have to look/learn the way these messages are display in each different language. This will come in the future how ever as i am aware that each person is used to "how their error messages are displayed". 
+
+## Roadmap and future ideas
+
+[ Limiting my self only to major languages like C, Haskel, Java, C#, C++, Python ]
+1. First I want to start by allowing `<blocks>` to translate code from the syntax of other programming languages but ignore their own standard library. I am just interested if i can create a basic parser with some `ML` that can detect a language and create an apporiate `C++` translation. 
+2. Next I want to ensure that the parser can distinguish between the different blocks in the tree and ensure that they can include/use each others code realiably
+3. When the basic building 'blocks' (you see what i did there :p) of the parser are done, I want to do the grindier job, which is learning how the standard library of these languages work and ensure the parser can distinguish between them/translate correct `C++` code. 
+
+[ Basic parser is done, now i can focus on supporting the more recent of niches like Rust, Ruby, Cobalt, Lisp, Go, Kotlin, R, ... ]
+1. First i want to support Rust, Go and Kotlin, than i will look into supporting some more requested languages. 
+
+[ Making the language/parser finally usefull! ]
+After i am satisfied with the amount of supported languages, i can start on developing the reason this language/parser existst, namely the 'Erlang like' features. 
+1. Ensuring that terminated tasks(or those that crash) do not affect the execution of other tasks. 
+2. Allowing people to simulate a Tree of tasks from a config file (somthing like `.json` should suffice) when they want to add another node without disrupting the execution of the current tree. 
+3. Allowing people to append the execution tree without disrupting the execution of the current tree. 
+4. Allowing people to change or remove a node in the execution tree without disrupting the execution of the current tree. 
+5. Giving people easier tools to debug which node of the execution tree causes issues. 
+6. Allowing LY++ to be ran inside a VM. 
+7. Allowing multiple VM to be linked in a tree with their own execution tree. 
+    - So if a program that is ran on VM1 crashed the entire VM (somehow) VM2 will not be affected and can detect/respond to this failure.
+    
+## Things that interest myself
+
+I always wanted to create my own 'mathematical programming' language from scratch, so i might work on this project after the main roadmap of LY++ is finished (meaning everything to make it a usefull language/parser). 
+
+Another i have not talked about is how the `make` files are generated. In the beginning i would opt to generate these automatically without any use configuration, but in the future i would like to implement some system that can import a `.json` file with some settings and than generate apporiate `cmake` of `make` files. For example you could have an option to more easily use libraries **That are suported** within specific blocks. For example:
+```json
+{"task": {
+  "id": "robot-code",
+  "UseCustomBuildFiles": "False",
+  "CustomBuildFileDir": "-",
+  "UseExternalLibs": {
+    "ExternalLibs": [
+      {"name": "ArUco", "type": "shared"},
+      {"name": "OpenCV", "type": "file", "path": "path/to/file.so"},
+      ...
+    ]
+  }
+}}
+...
+
+
 ```
