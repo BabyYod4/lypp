@@ -21,6 +21,9 @@ This will be a project i will do in my free time (mostly in the weekends) next t
 
 The real question i would like to ask you guys is: **What do you think of the idea? What would you change/add/remove?**
 
+## When it could usefull
+Image working in an dynamic team that had people using different programming languages. They could write the code in their own development envoirment and once its working they can easily copy paste it in a LY++ block which makes it instantly compatible with the other blocks. I also could see some use for envoirments where the a task running needs to be patched or modified, but the execution cannot stop as the downtime would cause allot of money to be lost. 
+
 ## So what is this about?
 The example code you have read shows you how 'block oriented' programming can be used to make multiple programming languages compatible with each other. 
 
