@@ -118,6 +118,8 @@ Another i have not talked about is how the `make` files are generated. In the be
   }
 }}
 ...
-
-
 ```
+
+## TLDR
+
+forgot to mentin what file extentions will be used xD. `.lypp` for sources and `lyhh` for headers. Sorry i got a bit carried away with the different examples
