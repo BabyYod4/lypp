@@ -17,7 +17,9 @@ This inspired me to come up with a "solution" that could work for everyone (as f
 
 Now you can encapsulate a block of code from language A and use it nativly, but still be ensured that a block of code of langauge B can access or use the code from A in some manner. 
 
-This will be a project i will do in my free time (mostly in the weekends) next some other project of my company, so i dont expect the development to be that fast. Another thing to consider is that I will probally change allot of code to be more optimized in the future as i will progress in my studies from Bachlor to Masters to PhD, so i will have better knowledge in Computer Science and Engineering. 
+This will be a project i will do in my free time (mostly in the weekends) next to some other project of my company, so i don't expect the development to be that fast. Another thing to consider is that I will probally change allot of code to be more optimized in the future as i will progress in my studies from Bachlor to Masters to PhD, so i will have better knowledge in Computer Science and Engineering. 
+
+The real question i would like to ask you guys is: **What do you think of the idea? What would you change/add/remove?**
 
 ## So what is this about?
 The example code you have read shows you how 'block oriented' programming can be used to make multiple programming languages compatible with each other. 
@@ -38,6 +40,8 @@ In reality LY++ is nothing more than a glorified C++ 'pre-parser' meaning it wil
 ![explain](https://user-images.githubusercontent.com/59289792/74106411-26a0ab80-4b67-11ea-9617-dfb15eb73299.png)
 
 The reason i have chosen C++ as a base, is because i have the most expecrience in it (compared to other languages) and i believe that it can be considered the 'Swiss Army Knife of Programming'. Another reason it that its one of the few languages i know that allowed for manual memory allocation, which means i could easily simulate a language that uses a garbage collector, but would never be able to simulate C++ in a language that has a garbage collector. (aka C++ can simulate [Java, etc] but [Java,etc] can never simulate C++. Ofcourse i could also use `C` as a base but trying to simulate Objected Oriented code in it is a real eye sore, and believe it or not i have a social life with family and friends ;D. I'd rather not walk that razor blade. 
+
+The reason i am using these brackets `<, >` for the language specific code, is that as far i am aware no major language every uses these bracket as a substitude of a scope. Most use something like `{, }` or `(, )` or `start; end;`
 
 ## Quircks and Limitations
 
