@@ -3,7 +3,7 @@
 LY++ The universal block oriented programming language that supports the most common iterative, functional and object oriented languages like C++, C#, C, Java, Haskell, Python and many more! [Concept]
 
 **Please read this code (.pdf file) and hold down your first impression**
-<img src="https://user-images.githubusercontent.com/59289792/74105362-66629580-4b5d-11ea-85d2-0072cc30f484.png" data-canonical-src="https://user-images.githubusercontent.com/59289792/74105362-66629580-4b5d-11ea-85d2-0072cc30f484.png" width="700" height="350" />
+<img src="https://user-images.githubusercontent.com/59289792/74105362-66629580-4b5d-11ea-85d2-0072cc30f484.png" data-canonical-src="https://user-images.githubusercontent.com/59289792/74105362-66629580-4b5d-11ea-85d2-0072cc30f484.png" width="900" height="500" />
 
 See code: [lypp_example_syntax.pdf](https://github.com/BabyYod4/lypp/files/4177125/example_syntax.pdf)
 
